@@ -1,0 +1,178 @@
+section.menuaction > header {
+  /*
+  background: none repeat scroll 0 0 rgba(46, 50, 50, 1);
+  */
+  background-image: url("images/dark_header.png");
+  position: absolute;
+}
+
+section.menuaction {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0rem;
+  bottom: 0rem;
+  border: none;
+  z-index: 2;
+  opacity: 1;
+  display: none;
+  background:
+    url('images/am_pattern.png') repeat scroll left top,
+    url('images/am_gradient.png') no-repeat scroll left top / 100% 100% transparent;
+}
+
+section.menuaction menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0rem;
+  /* max-height: calc(100% - 8rem); */
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: auto;
+}
+
+section.menuaction menu > menuitem {
+  display: list-item;
+  height: 4rem;
+  line-height: 4rem;
+  padding: 0 1rem;
+  margin: 0 1.5rem 1rem 1.5rem;
+  font-size: 1.4rem;
+  color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-shadow: none;
+  background: #5f5f5f padding-box;
+  border-radius: 0.2rem;
+  border: none;
+}
+
+section.menuaction menu > menuitem:not([icon]):before {
+  content: attr(label);
+}
+/* section.menuaction menu > menuitem[icon]:before { */
+/*   Sight.. that doesn't work yet.  Done in JS.     */
+/*   background-image: attr(icon, url);              */
+/*   background-repeat: no-repeat;                   */
+/*   background-position: center auto;               */
+/*                                                   */
+/* }                                                 */
+section.menuaction menu > menuitem[icon] {
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-origin: content-box;
+}
+
+section.menuaction menu + footer {
+   position: fixed;
+   height: 7rem;
+   width: auto;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   padding: 0 1.5rem;
+   background: url(images/am_pattern.png) repeat scroll left top #2D2D2D;
+   border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+}
+
+section.menuaction menu + footer > button {
+   text-shadow: 0.1rem 0.1rem 0 rgba(255,255,255,0.3);
+   color: #303030;
+   font-weight: normal;
+   background: #fafafa url(images/default.png) repeat-x left bottom / auto 100%;
+   border: solid 0.1rem #a6a6a6;
+   border-radius: 0.2rem;
+   margin-top: 1.5rem;
+   text-align: center;
+   font-size: 1.6rem;
+   height: 3.8rem;
+   width: 100%;
+}
+
+/* Press state */
+section.menuaction menu > menuitem:active {
+  background-color: #006f86;
+  color: #303030;
+  text-shadow: 0 0.1rem 0 rgba(255, 255, 255, 0.25);
+}
+
+section.menuaction menu + footer > button:active {
+  border: solid 0.1rem #008aaa;
+  background: #008aaa;
+  color: #303030;
+}
+
+/* Disabled */
+section.menuaction menu > menuitem[disabled] {
+  background: #4d4d4d;
+  color: #303030;
+  text-shadow: none;
+  border: none;
+  pointer-events: none;
+}
+
+
+.textEntry textarea {
+  /*
+  padding: 0.5rem 1rem;
+  height: 30%;
+  width: 95%;
+  font-size: 1.5rem;
+  margin: 1.5rem;
+  */
+}
+
+footer.toolbar {
+  height: 4rem;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0, 0.75);
+  box-shadow: 0px -2px 5px rgba(50, 50, 50, 0.75);
+  z-index: 1;
+}
+
+footer.toolbar menu {
+  display: none;
+  table-layout: fixed;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height:100%;
+  border: none;
+  color: white;
+}
+
+footer.toolbar menu[aria-expanded=true] {
+  display: inline-table;
+}
+
+footer.toolbar menu li {
+  display: table-cell;
+  background: url("images/separator.png") no-repeat scroll left -1px center / 2px 80%;
+  width: 100%;
+  margin:0;
+  padding:0;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+footer.toolbar menu li:first-child {
+  background: none;
+}
+
+footer.toolbar menu li:hover {
+  background-color: #008aaa;
+  color: #555;
+}
+
+footer.toolbar menu li:active {
+  background-color: #008aaa;
+  color: #555;
+}

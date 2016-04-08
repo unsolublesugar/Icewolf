@@ -1,0 +1,159 @@
+.tweet {
+	margin:5px 0;
+	border-bottom:1px solid #EEE;
+	font-size: small;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	display: block;
+	word-break: break-all;
+}
+.tweet a{
+	color: #38F;
+	text-decoration: none;
+}
+.tweet a:hover{
+	color: #38F;
+	text-decoration: underline;
+}
+.tweet_block {
+	margin-left: 56px;
+	line-height: 1.5em;
+	padding-bottom: 18px;
+}
+.twitter_icon {
+	float:left;
+}
+.twitter_icon img {
+   border-radius:50%;
+   box-shadow:1px 1px 1px rgba(0,0,0,0.4);
+	float:left;
+	margin:5px 10px 10px 0;
+}
+.user_name {
+	color:#333;
+	font-weight:bold;
+	vertical-align:middle;
+}
+.user_name a{
+	color:#333;
+}
+.user_name a:hover{
+	color: #38F;
+	text-decoration: underline;
+}
+.screen_name {
+	color:#999;
+	vertical-align:middle;
+	font-size: x-small;
+}
+.screen_name a{
+	color:#999;
+}
+.screen_name a:hover{
+	color:#999;
+	text-decoration: none;
+}
+.timestamp {
+	float:right;
+	color:#999;
+	vertical-align:bottom;
+	font-size: x-small;
+}
+.timestamp a{
+	color:#999;
+}
+.timestamp a:hover{
+	color: #38F;
+	text-decoration: underline;
+}
+.description {
+	clear: both;
+	padding: 5px;
+	font-size: medium;
+	/* background: #d6e5f5; */
+	background:#EEE;
+	border-radius: 5px;
+}
+.profile {
+	margin:8px 0;
+	font-size: small;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	display: block;
+	word-break: break-all;
+}
+.profile a{
+	text-decoration: none;
+}
+.profile a:hover{
+	color: #38F;
+	text-decoration: underline;
+}
+.profile_count {
+  font-size: medium;
+  padding:0 10px;
+}
+.profile_count ul {
+  border-top:1px solid #d6e5f5;
+  border-bottom:1px solid #f1f6fc;
+}
+.profile_count li {
+	padding: 5px 0;
+  margin-left:-40px;
+  list-style-type : none;
+  border-top:1px solid #f1f6fc;
+  border-bottom:1px solid #d6e5f5;
+}
+
+
+
+
+
+
+.detail {
+	float:right;
+	color:#AAA;
+	vertical-align:top;
+	font-size: x-small;
+}
+.textContents {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   display: block;
+   height: 10rem;
+   width: 95%;
+   padding: 0.5rem 1rem;
+   border: 1px solid #D1D1D1;
+   border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+   font-size: 1.5rem;
+   margin:10px;
+	margin-top: 6rem;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+/* clearfix for ie7 */
+.clearfix{
+    display: inline-block;
+}
+.clearfix {
+    display: block;
+}
+
+.counter{
+	float:right;
+	font-size:16px;
+	font-weight:bold;
+	color:#eee;
+	margin-right: 5px;
+	}
+form .warning{color:#600;}
+form .exceeded{color:#e00;}

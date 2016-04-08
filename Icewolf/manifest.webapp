@@ -1,0 +1,28 @@
+{
+  "name": "Icewolf",
+  "version": "0.1",
+  "description": "Twitter client",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/images/icon_16.png",
+    "32": "/images/icon_32.png",
+    "48": "/images/icon_48.png",
+    "64": "/images/icon_64.png",
+    "128": "/images/icon_128.png"
+  },
+  "developer": {
+    "name": "unsoluble_sugar",
+    "url": "http://unsolublesugar.com"
+  },
+  "installs_allowed_from": ["*"],
+  "default_locale": "en-US",
+  "type": "privileged",
+  "permissions": {
+      "systemXHR": {
+        "description": "for OAuth"
+      },
+       "geolocation": {
+         "description": "for tweet"
+      }
+  }
+}

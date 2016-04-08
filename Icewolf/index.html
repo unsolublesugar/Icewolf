@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+   <link rel="stylesheet" type="text/css" href="style/style.css"/>
+   <link rel="stylesheet" type="text/css" href="style/icons.css"/>
+   <link rel="stylesheet" type="text/css" href="style/principal.css"/>
+   <link rel="stylesheet" type="text/css" href="style/header.css"/>
+   <link rel="stylesheet" type="text/css" href="style/toolbar.css"/>
+   <link rel="stylesheet" type="text/css" href="style/sidebar.css"/>
+   <link rel="stylesheet" type="text/css" href="style/menuaction.css"/>
+   <link rel="stylesheet" type="text/css" href="style/menulist.css"/>
+   <link rel="stylesheet" type="text/css" href="style/pagebody.css"/>
+   <script type="text/javascript" src="js/temporary.js"></script>
+   <script type="text/javascript" src="js/dispatcher.js"></script>
+   <script type="text/javascript" src="js/install.js"></script>
+   <script type="text/javascript" src="js/toolbar.js"></script>
+   <script type="text/javascript" src="js/sidebar.js"></script>
+   <script type="text/javascript" src="js/menuaction.js"></script>
+   <script type="text/javascript" src="js/menulist.js"></script>
+   <script type="text/javascript" src="js/pagebody.js"></script>
+
+   <script type="text/javascript" src="js/lib/jquery-2.1.1.min.js"></script>
+   <script type="text/javascript" src="js/jsOAuth-1.3.6.js"></script>
+   <script type="text/javascript" src="js/lib/strtotime.js"></script>
+   <script type="text/javascript" src="js/lib/twitter-text.js"></script>
+   <script type="text/javascript" src="js/lib/charCount.js"></script>
+   <script type="text/javascript" src="js/index.js"></script>
+   <script type="text/javascript" src="js/oauthInfo.js"></script>
+   <script type="text/javascript" src="js/getOAuth.js"></script>
+   <script type="text/javascript" src="js/getTimeStamp.js"></script>
+   <script type="text/javascript" src="js/getHomeTimeline.js"></script>
+   <script type="text/javascript" src="js/getMention.js"></script>
+   <script type="text/javascript" src="js/getDM.js"></script>
+   <script type="text/javascript" src="js/getProfile.js"></script>
+   <script type="text/javascript" src="js/update.js"></script>
+   <title>FxOS Stub</title>
+</head>
+<body>
+   <section class="principal">
+      <header>
+<!--
+        <button id="sidebar_trigger" class="icon menu"></button>
+      -->
+        <h1>
+        <img src="images/icon_48.png" alt="Icewolf" width="42" height="42" align="top"/>
+        <span id="header_text">Timeline</span>
+      </h1>
+        <ul>
+           <li id="" class="icon search"/></li>
+           <li id="menuaction_trigger" class="icon compose"/></li>
+        </ul>
+      </header>
+
+      <div id="page0" class="pagebody" aria-owns="tb0" aria-expanded="true">
+         <div style="margin:0.5rem 0">
+           <div id="timeline"></div>
+         </div>
+      </div>
+
+      <div id="page1" class="pagebody" aria-owns="tb0">
+         <div style="margin:0.5rem 0">
+           <div id="mention"></div>
+         </div>
+      </div>
+
+      <div id="page2" class="pagebody" aria-owns="tb0">
+         <div style="margin:0.5rem 0">
+          <div id="dm"></div>
+         </div>
+      </div>
+
+
+      <div id="page3" class="pagebody" aria-owns="tb0">
+         <div style="margin:0.5rem 0">
+           <div id="profile"></div>
+         </div>
+      </div>
+
+
+      <footer class="toolbar">
+         <menu id="tb0" type="toolbar" aria-expanded="true">
+            <li id="timeline_trigger" aria-controls="page0" class="icon clock"/></li>
+            <li id="mention_trigger" aria-controls="page1" class="icon at"/></li>
+            <li id="dm_trigger" aria-controls="page2" class="icon mail"/></li>
+            <li id="profile_trigger" aria-controls="page3" class="icon contacts"/></li>
+         </menu>
+         <menu id="tb1" type="toolbar">
+            <li class="icon month"></li>
+            <li class="icon paste"></li>
+         </menu>
+         <menu id="tb2" type="toolbar">
+            <li class="icon send"></li>
+            <li>Hello?</li>
+            <li class="icon edit_picture"></li>
+            <li class="icon hide"></li>
+            <li class="icon delete"></li>
+         </menu>
+         <menu id="tb3" type="toolbar">
+         </menu>
+      </footer>
+   </section>
+
+   <section class="sidebar">
+      <header><h2>Setting</h2></header>
+      <div class="menulist">
+         <menu type="popup" label="Menu I">
+            <menuitem type="checkbox" label="I 1"></menuitem>
+            <menuitem type="checkbox" label="I 2"></menuitem>
+            <menuitem type="checkbox" label="I 3"></menuitem>
+         </menu>
+         <menu type="popup" label="Menu II">
+            <menuitem type="checkbox" label="II 1"></menuitem>
+            <menu label="Menu II 2">
+              <menuitem type="checkbox" label="II 2.a"></menuitem>
+              <menu label="Menu II 2.b">
+                 <menuitem type="radio" radiogroup="grp1" label="hot"></menuitem>
+                 <menuitem type="radio" radiogroup="grp2" label="red"></menuitem>
+                 <menuitem type="radio" radiogroup="grp1" label="cold"></menuitem>
+                 <menuitem type="radio" radiogroup="grp2" label="blue"></menuitem>
+                 <menuitem type="radio" radiogroup="grp2" label="yellow"></menuitem>
+                 <menuitem type="radio" radiogroup="grp1" label="tepid"></menuitem>
+              </menu>
+              <menuitem type="checkbox" label="II 2.c"></menuitem>
+              <menuitem type="checkbox" label="II 2.d"></menuitem>
+            </menu>
+            <menuitem type="checkbox" label="II 3"></menuitem>
+         </menu>
+      </div>
+   </section>
+
+   <section class="menuaction">
+      <header>
+        <button id="cancel" class="icon cancel"></button>
+        <h1>New Tweet</h1>
+        <ul>
+           <li id="update_trigger" class="icon mail_send"/></li>
+        </ul>
+      </header>
+        <textarea id="textContents" placeholder="Tweet" maxlength="140" class="textContents"></textarea>
+      <footer class="toolbar">
+         <menu id="tb0" type="toolbar" aria-expanded="true">
+            <li aria-controls="page_place" class="icon camera"/></li>
+         </menu>
+      </footer>
+   </section>
+</body>
+</html>
