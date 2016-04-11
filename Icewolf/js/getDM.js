@@ -46,13 +46,6 @@ function getDM() {
            '<div class="tweet_block">' + tweet + '</div>' +
            '</div>'
          );
-
-
-/*
-       html.push(
-         '<img src="none.gif" />'
-         );
-*/
      };
      $('#header_text').text("Messages");
      $('#dm').html(html.join(''));
